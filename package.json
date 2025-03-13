@@ -1,0 +1,77 @@
+{
+  "name": "wprun",
+  "displayName": "wprun",
+  "description": "wprun is extension for running the workspace project",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "wprun.all",
+        "title": "Wp Run : running all project"
+      },
+      {
+        "command": "wprun.single-project",
+        "title": "Wp Run One Project : running a single project"
+      },
+      {
+        "command": "wprun.refresh",
+        "title": "Refresh Projects"
+      },
+      {
+        "command": "wprun.create-json",
+        "title": "Create project.json"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "project-workspace",
+          "title": "Project Workspace",
+          "icon": "resources/main-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "project-workspace": [
+        {
+          "icon": "",
+          "id": "project-workspace-view",
+          "name": "Project Run"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "project-workspace-view",
+        "contents": "File project.json not found. Click below to create one. \n[Create project.json](command:wprun.create-json)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.98.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.25.0",
+    "@typescript-eslint/parser": "^8.25.0",
+    "eslint": "^9.21.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
