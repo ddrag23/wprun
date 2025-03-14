@@ -6,17 +6,10 @@ WPRUN is a Visual Studio Code extension designed to run multiple projects within
 
 - **Project Auto-Detection**: Reads a `projects.json` file to list available projects automatically.
 - **Run Projects Easily**: Provides a sidebar with a "Run" button for each project.
-- **Custom Commands**: Supports running custom commands per project.
 - **Add New Projects**: If `projects.json` is missing, an option to create it is available.
-- **Remove Configuration**: Easily delete `projects.json` from the sidebar.
-
-### Screenshot
-
-![WPRUN Sidebar](resources/main-icon.svg)
 
 ## Requirements
 
-- **Node.js** installed on your system (for running npm/yarn-based projects).
 - Your project should have a valid `projects.json` file in the root workspace.
 
 ## Configuration
@@ -68,11 +61,6 @@ This extension provides the following commands:
 - Initial release of WPRUN.
 - Sidebar with project list and run buttons.
 - Support for `projects.json` configuration.
-
-### 1.1.0
-
-- Added feature to create `projects.json` automatically.
-- Added support for removing `projects.json`.
 
 ## Extension Guidelines
 
