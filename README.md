@@ -40,6 +40,7 @@ WPRUN reads a `projects.json` file in the root of your workspace. The format is 
 1. Open your workspace in VS Code.
 2. If `projects.json` does not exist, click the **"Create projects.json"** button in the sidebar.
 3. Once the projects are loaded, click **"Run"** next to any project to start it.
+4. If you want to run everything, you can press Ctrl + Shift + P, type wp run, and select Run All
 
 ## Extension Commands
 
